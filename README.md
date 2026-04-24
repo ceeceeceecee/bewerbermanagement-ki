@@ -76,6 +76,17 @@ Dieses System ist als **Entscheidungshilfe** konzipiert:
 
 > Die KI liefert Bewertungen und Empfehlungen. Die **letzte Entscheidung** liegt immer bei einer menschlichen Fachkraft. Automatisierte Entscheidungen im Sinne des § 15 Abs. 1 AGG werden nicht getroffen.
 
+## 📸 Screenshots
+
+### Dashboard — Bewerberübersicht mit Statuskarten
+![Dashboard](screenshots/dashboard.png)
+
+### KI-Scoring — Transparente Bewerberbewertung
+![Scoring](screenshots/scoring.png)
+
+### Bewerbervergleich — Tabellarischer Vergleich mehrerer Kandidaten
+![Vergleich](screenshots/vergleich.png)
+
 ## 📄 Lizenz
 
 MIT License — siehe [LICENSE](LICENSE)
