@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Eingangsbestätigung Bewerbung</title>
+</head>
+<body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+    <div style="background: #1a365d; color: white; padding: 20px; border-radius: 8px 8px 0 0;">
+        <h1 style="margin: 0;">Eingangsbestätigung</h1>
+    </div>
+    <div style="background: #f7fafc; padding: 30px; border: 1px solid #e2e8f0;">
+        <p>Sehr geehrte/r {{ name }},</p>
+
+        <p>hiermit bestätigen wir den Eingang Ihrer Bewerbung für die Stelle</p>
+
+        <p style="font-size: 1.1em; font-weight: bold; color: #2c5282;">
+            {{ stelle }}
+        </p>
+
+        <p>
+            <strong>Eingangsdatum:</strong> {{ eingangsdatum }}<br>
+            <strong>Bewerbungsnummer:</strong> wird separat zugewiesen
+        </p>
+
+        <p>
+            Ihre Unterlagen werden sorgfältig geprüft. Sie erhalten in Kürze
+            Informationen über das weitere Vorgehen.
+        </p>
+
+        <div style="background: #ebf8ff; padding: 15px; border-radius: 5px; margin: 20px 0;">
+            <p style="margin: 0; font-size: 0.9em; color: #2c5282;">
+                <strong>Datenschutzhinweis:</strong> Ihre personenbezogenen Daten
+                werden ausschließlich für die Bearbeitung Ihrer Bewerbung verwendet
+                und nach Abschluss des Verfahrens gemäß den gesetzlichen
+                Aufbewahrungsfristen gelöscht.
+            </p>
+        </div>
+    </div>
+    <div style="background: #edf2f7; padding: 20px; border-radius: 0 0 8px 8px; text-align: center;">
+        <p style="margin: 0; color: #4a5568;">
+            Mit freundlichen Grüßen<br>
+            <strong>{{ behoerde }}</strong><br>
+            Personalabteilung
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+# Bewerbermanagement-KI — Konfiguration
+# Kopieren Sie diese Datei als settings.yaml und passen Sie die Werte an.
+
+# Ollama KI-Backend (Standard: lokal)
+ollama:
+  base_url: "http://localhost:11434"
+  model: "llama3"
+  timeout: 120  # Sekunden
+
+# Optionaler Claude API Fallback (Cloud — DSGVO-Vorabklärung erforderlich!)
+claude:
+  enabled: false
+  api_key: "sk-ant-PLATZHALTER"
+  model: "claude-3-sonnet-20240229"
+
+# SMTP E-Mail-Konfiguration
+smtp:
+  host: "smtp.example.de"
+  port: 587
+  tls: true
+  benutzer: "bewerbungen@example.de"
+  passwort: "PLATZHALTER"
+  absender: "bewerbungen@example.de"
+  behoerde_name: "Stadtverwaltung Musterstadt"
+
+# Datenbank
+database:
+  host: "localhost"
+  port: 5432
+  name: "bewerbermanagement"
+  benutzer: "bewerberki"
+  passwort: "PLATZHALTER"
+
+# Redis Cache
+redis:
+  host: "localhost"
+  port: 6379
+  db: 0
+
+# Scoring-Schwellen
+scoring:
+  schwelle_einladung: 70    # Ab diesem Score: Einladung vorschlagen
+  schwelle_weiter: 50       # Ab diesem Score: Weiter in der Auswahl
+  schwelle_absage: 30       # Unter diesem Score: Absage vorschlagen
+
+# DSGVO Aufbewahrungsfristen
+aufbewahrung:
+  bewerbungen_monate: 6           # Monate nach Verfahrensabschluss
+  abgelehnte_monate: 6            # Monate nach Absage
+  audit_log_monate: 24            # Monate Audit-Log
+  auto_loeschung: true            # Automatische Löschung aktivieren
+  loeschung_cron: "0 2 * * *"     # Täglich um 02:00 Uhr
+
+# Jobportal API-Keys (Platzhalter)
+jobportale:
+  interamt:
+    api_key: "PLATZHALTER"
+    aktiv: false
+  kimeta:
+    api_key: "PLATZHALTER"
+    aktiv: false

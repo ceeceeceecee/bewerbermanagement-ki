@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pyo
+*.log
+.env
+uploads/
+*.key
+*.pem
+*.db
+config/settings.yaml
+config/bewertungskriterien.yaml
+.DS_Store
+.vscode/

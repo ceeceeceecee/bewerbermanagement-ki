@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Einladung zum Vorstellungsgespräch</title>
+</head>
+<body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+    <div style="background: #1a365d; color: white; padding: 20px; border-radius: 8px 8px 0 0;">
+        <h1 style="margin: 0;">Einladung zum Vorstellungsgespräch</h1>
+    </div>
+    <div style="background: #f7fafc; padding: 30px; border: 1px solid #e2e8f0;">
+        <p>Sehr geehrte/r {{ name }},</p>
+
+        <p>
+            wir freuen uns, Sie zu einem Vorstellungsgespräch für die Stelle
+        </p>
+
+        <p style="font-size: 1.1em; font-weight: bold; color: #2c5282;">
+            {{ stelle }}
+        </p>
+
+        <p>einladen zu dürfen:</p>
+
+        <div style="background: #ebf8ff; padding: 20px; border-radius: 5px; margin: 20px 0;">
+            <p style="margin: 5px 0;">
+                <strong>Datum:</strong> {{ datum }}
+            </p>
+            <p style="margin: 5px 0;">
+                <strong>Uhrzeit:</strong> {{ uhrzeit }} Uhr
+            </p>
+            <p style="margin: 5px 0;">
+                <strong>Ort:</strong> {{ ort }}
+            </p>
+        </div>
+
+        <p>
+            Bitte bringen Sie folgende Unterlagen mit:
+        </p>
+        <ul>
+            <li>Lebenslauf</li>
+            <li>Zeugnisse und Zertifikate</li>
+            <li>Ausweisdokument</li>
+        </ul>
+
+        <p>
+            Sollten Sie zu dem genannten Termin verhindert sein, bitten wir Sie,
+            uns zeitnah zu kontaktieren, damit wir einen Ersatztermin vereinbaren können.
+        </p>
+    </div>
+    <div style="background: #edf2f7; padding: 20px; border-radius: 0 0 8px 8px; text-align: center;">
+        <p style="margin: 0; color: #4a5568;">
+            Mit freundlichen Grüßen<br>
+            <strong>{{ behoerde }}</strong><br>
+            Personalabteilung
+        </p>
+    </div>
+</body>
+</html>

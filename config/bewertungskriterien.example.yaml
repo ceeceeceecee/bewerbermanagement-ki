@@ -1,0 +1,78 @@
+# Bewertungskriterien für das KI-Scoring
+# Konfiguration der Kriterien und Gewichtung pro Stellentyp
+
+# Standard-Gewichtung (wenn kein Stellentyp definiert)
+standard:
+  qualifikation:
+    gewichtung: 35
+    beschreibung: "Formalqualifikation (Ausbildung, Studium, Zertifikate)"
+  berufserfahrung:
+    gewichtung: 30
+    beschreibung: "Relevante Arbeitserfahrung, Verantwortungsbereiche"
+  motivation:
+    gewichtung: 20
+    beschreibung: "Motivation im Anschreiben, Interesse an der Stelle"
+  soft_skills:
+    gewichtung: 15
+    beschreibung: "Kommunikation, Teamfähigkeit, Eigeninitiative"
+
+# Spezifische Gewichtung nach Stellentyp
+stellentypen:
+
+  verwaltung:
+    qualifikation:
+      gewichtung: 40
+      beschreibung: "Verwaltungsfachausbildung, Verwaltungsstudium"
+    berufserfahrung:
+      gewichtung: 30
+    motivation:
+      gewichtung: 15
+    soft_skills:
+      gewichtung: 15
+      beschreibung: "Bürgernähe, Sorgfalt, Zuverlässigkeit"
+
+  it:
+    qualifikation:
+      gewichtung: 30
+      beschreibung: "Informatikstudium, IT-Zertifizierungen"
+    berufserfahrung:
+      gewichtung: 35
+      beschreibung: "Systemadministration, Netzwerke, Cloud"
+    motivation:
+      gewichtung: 15
+    soft_skills:
+      gewichtung: 20
+      beschreibung: "Problemlösung, Teamarbeit, Dokumentation"
+
+  fuehrungskraft:
+    qualifikation:
+      gewichtung: 25
+    berufserfahrung:
+      gewichtung: 35
+      beschreibung: "Führungserfahrung, Projektmanagement"
+    motivation:
+      gewichtung: 15
+    soft_skills:
+      gewichtung: 25
+      beschreibung: "Führungskompetenz, Strategie, Kommunikation"
+
+  ausbildung:
+    qualifikation:
+      gewichtung: 20
+      beschreibung: "Schulabschluss, Praktika"
+    berufserfahrung:
+      gewichtung: 10
+      beschreibung: "Praktische Erfahrungen, Ehrenamt"
+    motivation:
+      gewichtung: 40
+      beschreibung: "Motivation, Lernbereitschaft, Interesse am Beruf"
+    soft_skills:
+      gewichtung: 30
+      beschreibung: "Zuverlässigkeit, Teamfähigkeit, Pünktlichkeit"
+
+# AGG-Hinweis (wird in der UI angezeigt)
+agg_hinweis: |
+  Die KI-Bewertung dient ausschließlich als Entscheidungshilfe.
+  Die endgültige Bewertung obliegt der menschlichen Fachkraft.
+  Automatisierte Entscheidungen im Sinne des § 15 Abs. 1 AGG
+  werden nicht getroffen.
