@@ -87,6 +87,10 @@ Dieses System ist als **Entscheidungshilfe** konzipiert:
 ### Bewerbervergleich — Tabellarischer Vergleich mehrerer Kandidaten
 ![Vergleich](screenshots/vergleich.png)
 
+
+## 👤 Autor
+
+**Cela** — Freelancer für digitale Verwaltungslösungen
 ## 📄 Lizenz
 
 MIT License — siehe [LICENSE](LICENSE)
