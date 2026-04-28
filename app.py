@@ -238,7 +238,7 @@ def get_status_emoji(status):
 
 # ─── Sidebar ─────────────────────────────────────────────────────────────
 
-st.sidebar.image("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48dGV4dCB4PSIzMCIgeT0iNDAiIGZvbnQtc2l6ZT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiPvCfp6Y8L3RleHQ+PC9zdmc+", width=60)
+st.sidebar.markdown("# 🏛️")
 st.sidebar.title("Bewerbermanagement-KI")
 st.sidebar.caption("für deutsche Behörden")
 
