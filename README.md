@@ -1,96 +1,67 @@
-# Bewerbermanagement-KI – Moderne HR-Lösung für Behörden
+# Bewerbermanagement Ki
 
-![DSGVO-konform](https://img.shields.io/badge/DSGVO-konform-brightgreen)
-![AGG-konform](https://img.shields.io/badge/AGG-konform-brightgreen)
-![Self-Hosted](https://img.shields.io/badge/Self--Hosted-blue)
-![Docker](https://img.shields.io/badge/Docker-ready-2496ED)
-![Python](https://img.shields.io/badge/Python-3.11+-3776AB)
+<p align="center">
+<img src="https://raw.githubusercontent.com/ceeceeceecee/ai-document-analyzer/main/docs/coletrading-banner.svg" alt="ColeTrading" width="600">
+</p>
 
-## 🎯 Problem
+![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python) ![DSGVO](https://img.shields.io/badge/DSGVO-Konform-brightgreen) ![AGG](https://img.shields.io/badge/AGG-Konform-brightgreen) ![Self-Hosted](https://img.shields.io/badge/Self-Hosted-blue) ![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker)
 
-Deutsche Behörden stehen vor massiven Herausforderungen im Personalrecruiting:
+> KI-gestütztes Bewerbermanagement mit transparentem Scoring (AGG-konform)
 
-- **Fachkräftemangel** — Offene Stellen bleiben monatelang unbesetzt
-- **Veraltete Ausschreibungen** — Unattraktive Formulierungen schrecken Bewerber ab
-- **Langsame Prozesse** — Manuelle Sichtung hundrierender Bewerbungen
-- **DSGVO-Hürden** — Unsicherheit bei der Verarbeitung sensibler Bewerberdaten
-- **AGG-Risiken** — Diskriminierungsfallen in Ausschreibungstexten
+## Overview
 
-## ✅ Features
+Transparentes Bewerbermanagement-System mit KI-Unterstützung. Automatisches Scoring mit erklärbarer KI, AGG-konform und DSGVO-sicher. Self-hosted mit Ollama.
 
-- 🤖 **KI-gestützte Ausschreibungsoptimierung** — Modernisierung mit AGG-Check
-- 📊 **Transparentes Bewerber-Scoring** — KI bewertet, Mensch entscheidet
-- 📄 **PDF-Analyse** — Automatische Extraktion aus Lebenslauf & Anschreiben
-- 📧 **Automatisierte Kommunikation** — Eingangsbestätigung, Einladungen, Absagen
-- 📅 **Terminmanagement** — Vorstellungsgespräche organisieren
-- 📈 **Statistiken & Reporting** — Bewerbungszahlen, Time-to-Hire, Quellen
-- 🔒 **DSGVO-konform** — Self-Hosted, Löschkonzept, Audit-Log
-- ⚖️ **AGG-konform** — KI als Entscheidungshilfe, keine automatischen Entscheidungen
-- 🐳 **Ein-Kommando-Install** — Docker Compose macht alles
+## Features
 
-## 🚀 Schnellstart
+- Transparentes KI-Scoring mit Erklärung
+- AGG-konforme Bewertung
+- Automatische Eignungsanalyse
+- Vergleichs-Dashboard
+- E-Mail-Benachrichtigungen
+- DSGVO-konforme Datenspeicherung
+
+## Tech Stack
+
+| Tech | Zweck |
+|------|-------|
+| Python 3.11+ | Backend |
+| Streamlit | Web-Interface |
+| Ollama | Lokale KI |
+| SQLite | Datenbank |
+| Docker | Deployment |
+
+## Quick Start
 
 ```bash
-git clone https://github.com/ceeceeceecee/bewerbermanagement-ki.git
-cd bewerbermanagement-ki
-cp config/settings.example.yaml config/settings.yaml
-docker compose up -d
+pip install -r requirements.txt
+streamlit run app.py
 ```
 
-Anschließend: **http://localhost:8501**
+## Screenshots
 
-## 📁 Projektstruktur
+**Dashboard mit Bewerberübersicht**
 
-```
-bewerbermanagement-ki/
-├── app.py                          # Streamlit Web-App
-├── processor/
-│   ├── ausschreibung_optimizer.py  # KI-Ausschreibungsoptimierung
-│   ├── bewerbung_analyzer.py       # KI-Bewerbungsanalyse & Scoring
-│   └── kommunikation.py            # E-Mail-Kommunikation
-├── database/
-│   ├── schema.sql                  # PostgreSQL-Schema
-│   └── db_manager.py              # Datenbank-Zugriff
-├── prompts/                        # Ollama-System-Prompts
-├── email_templates/                # HTML-E-Mail-Vorlagen
-├── config/                         # Konfiguration (Platzhalter)
-├── docs/                           # DSGVO, Setup, AGG
-├── scripts/                        # Setup & Demo-Daten
-└── docker-compose.yml
-```
+<img src="screenshots/dashboard.png" alt="Dashboard mit Bewerberübersicht" width="800">
 
-## 🤖 KI-Backend
+**KI-Scoring mit transparenter Erklärung**
 
-**Standard: Ollama (lokal, DSGVO-konform)**
-- Alle KI-Funktionen laufen lokal über Ollama
-- Keine Daten verlassen den Server
-- Empfohlenes Modell: `llama3` oder `mistral`
+<img src="screenshots/scoring.png" alt="KI-Scoring mit transparenter Erklärung" width="800">
 
-**Optional: Claude API (Cloud-Fallback)**
-- Kann als Alternative konfiguriert werden
-- ⚠️ DSGVO-Vorabklärung erforderlich!
+**Bewerbervergleich**
 
-## ⚖️ AGG-Konformität
+<img src="screenshots/vergleich.png" alt="Bewerbervergleich" width="800">
 
-Dieses System ist als **Entscheidungshilfe** konzipiert:
+---
 
-> Die KI liefert Bewertungen und Empfehlungen. Die **letzte Entscheidung** liegt immer bei einer menschlichen Fachkraft. Automatisierte Entscheidungen im Sinne des § 15 Abs. 1 AGG werden nicht getroffen.
+## Contributing
 
-## 📸 Screenshots
+Beiträge sind willkommen! Bitte erstelle einen Issue oder Pull Request.
 
-### Dashboard — Bewerberübersicht mit Statuskarten
-![Dashboard](screenshots/dashboard.png)
+## License
 
-### KI-Scoring — Transparente Bewerberbewertung
-![Scoring](screenshots/scoring.png)
+MIT License — siehe [LICENSE](LICENSE).
 
-### Bewerbervergleich — Tabellarischer Vergleich mehrerer Kandidaten
-![Vergleich](screenshots/vergleich.png)
-
-
-## 👤 Autor
-
-**Cela** — Freelancer für digitale Verwaltungslösungen
-## 📄 Lizenz
-
-MIT License — siehe [LICENSE](LICENSE)
+<p align="center">
+<a href="https://github.com/ceeceeceecee">ColeTrading</a> &bull; DSGVO-konform &bull; Self-Hosted &bull; Open Source
+</p>
