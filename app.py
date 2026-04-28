@@ -8,6 +8,11 @@ import os
 import sys
 from datetime import datetime, date
 
+# -- Unified Theme System --
+import sys, os as _theme_os
+sys.path.insert(0, _theme_os.path.dirname(_theme_os.path.abspath(__file__)))
+from theme import init_theme, theme_toggle_sidebar, app_footer
+
 # Pfad für Imports
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
@@ -35,6 +40,8 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
+
+init_theme()
 
 # Benutzerdefiniertes CSS
 st.markdown("""
@@ -772,3 +779,9 @@ elif seite == "📈 Statistiken":
 
 st.markdown("---")
 st.caption("Bewerbermanagement-KI | © 2024 | MIT License | Ollama als KI-Backend | DSGVO & AGG konform")
+
+# -- Theme Toggle --
+theme_toggle_sidebar()
+
+# -- Footer --
+app_footer()
