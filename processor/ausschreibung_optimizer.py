@@ -9,9 +9,10 @@ from pathlib import Path
 class AusschreibungOptimizer:
     """Optimiert Stellenausschreibungen mit Hilfe lokaler KI (Ollama)."""
 
-    def __init__(self, ollama_url: str = "http://localhost:11434", model: str = "llama3"):
-        self.ollama_url = ollama_url
-        self.model = model
+    def __init__(self, ollama_url: str = None, model: str = None):
+        import os
+        self.ollama_url = ollama_url or os.getenv("OLLAMA_HOST", "http://localhost:11434")
+        self.model = model or os.getenv("OLLAMA_MODEL", "llama3")
         # System-Prompt laden
         prompt_path = Path(__file__).parent.parent / "prompts" / "ausschreibung-optimierung.txt"
         self.system_prompt = prompt_path.read_text(encoding="utf-8") if prompt_path.exists() else ""

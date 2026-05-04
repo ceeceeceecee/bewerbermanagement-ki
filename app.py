@@ -25,7 +25,7 @@ def load_config():
         with open(config_path, "r", encoding="utf-8") as f:
             return yaml.safe_load(f)
     return {
-        "ollama": {"base_url": "http://localhost:11434", "model": "llama3"},
+        "ollama": {"base_url": os.getenv("OLLAMA_HOST", "http://localhost:11434"), "model": os.getenv("OLLAMA_MODEL", "llama3")},
         "scoring": {"schwelle_einladung": 70, "schwelle_weiter": 50},
         "aufbewahrung": {"bewerbungen_monate": 6, "abgelehnte_monate": 3},
     }
